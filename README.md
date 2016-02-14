@@ -1,5 +1,5 @@
 # Test assignment implementation for Neueda
-My implementation of a test assignment for Neueda, Latvia @ 25.01.2015
+My implementation of a test assignment for [Neueda](https://github.com/neueda/homework/tree/master/mindmap), Latvia @ 25.01.2015
 
 ### Implementation details
 In order to launch app please use next command:
@@ -31,11 +31,9 @@ http://calculator.neueda.lv/
 You can use the UI and browser development tools to find out what is the
 exact query format.
 
-[Provided mind map](calc_tests.mm) describes test cases for the REST service.
+[Provided mind map](https://github.com/neueda/homework/blob/master/mindmap/calc_tests.mm) describes test cases for the REST service.
 
-[![Mind Map][1]]
-
-    [1]: https://github.com/neueda/homework/blob/master/mindmap/mindmap.png
+![Mind Map](https://github.com/neueda/homework/blob/master/mindmap/mindmap.png)
 
 Node levels have the following meaning:
 
