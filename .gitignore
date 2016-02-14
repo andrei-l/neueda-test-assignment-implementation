@@ -1,12 +1,13 @@
-*.class
+## Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+*.iml
+## Directory-based project format:
+.idea/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+## Build directory
+target/
+out/
 
 # Package Files #
 *.jar
 *.war
 *.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
