@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="map">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="node"/>
+            </xs:sequence>
+            <xs:attribute name="version" use="required" type="xs:NMTOKEN"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="node">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="node"/>
+                    <xs:element ref="arrowlink"/>
+                    <xs:element ref="linktarget"/>
+                </xs:choice>
+                <xs:element minOccurs="0" ref="font"/>
+            </xs:sequence>
+            <xs:attribute name="CREATED" use="required" type="xs:integer"/>
+            <xs:attribute name="ID" use="required" type="xs:NCName"/>
+            <xs:attribute name="MODIFIED" use="required" type="xs:integer"/>
+            <xs:attribute name="POSITION" type="xs:NCName"/>
+            <xs:attribute name="TEXT" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="arrowlink">
+        <xs:complexType>
+            <xs:attribute name="DESTINATION" use="required" type="xs:NCName"/>
+            <xs:attribute name="ENDARROW" use="required" type="xs:NCName"/>
+            <xs:attribute name="ENDINCLINATION" use="required"/>
+            <xs:attribute name="ID" use="required" type="xs:NCName"/>
+            <xs:attribute name="STARTARROW" use="required" type="xs:NCName"/>
+            <xs:attribute name="STARTINCLINATION" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="linktarget">
+        <xs:complexType>
+            <xs:attribute name="COLOR" use="required"/>
+            <xs:attribute name="DESTINATION" use="required" type="xs:NCName"/>
+            <xs:attribute name="ENDARROW" use="required" type="xs:NCName"/>
+            <xs:attribute name="ENDINCLINATION" use="required"/>
+            <xs:attribute name="ID" use="required" type="xs:NCName"/>
+            <xs:attribute name="SOURCE" use="required" type="xs:NCName"/>
+            <xs:attribute name="STARTARROW" use="required" type="xs:NCName"/>
+            <xs:attribute name="STARTINCLINATION" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="font">
+        <xs:complexType>
+            <xs:attribute name="NAME" use="required" type="xs:NCName"/>
+            <xs:attribute name="SIZE" use="required" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
